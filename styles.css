@@ -15,10 +15,11 @@ body {
 
 /* Background Image for the page */
 .background-container {
-    background-image: url('Background.jpg'); 
-    background-size: cover;
-    background-position: center;
-    min-height: 100vh;
+    background-image: url('background.jpg'); /* Make sure the image path is correct */
+    background-size: cover; /* Makes sure the background covers the entire container */
+    background-position: center; /* Centers the image */
+    background-attachment: fixed; /* Keeps the background fixed while scrolling */
+    min-height: 100vh; /* Ensures the container covers the entire viewport */
     padding: 20px;
 }
 
@@ -36,9 +37,10 @@ header {
 
 /* Style for the profile photo */
 .profile-photo {
-    width: 150px; /* Adjust size as needed */
+    width: 150px; /* Adjust size if necessary */
     height: 150px;
-    border-radius: 50%;
+    border-radius: 50%; /* Makes the photo circular */
+    object-fit: cover; /* Ensures the image fits the container without distortion */
     margin-right: 20px;
 }
 
