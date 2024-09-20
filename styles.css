@@ -23,30 +23,38 @@ body {
     padding: 20px;
 }
 
-/* Header Section */
+/* Header Section for Desktop View */
 header {
+    display: flex;
+    justify-content: space-between; /* Distributes space between photo, name, and contact info */
+    align-items: center; /* Vertically aligns the items */
     margin-bottom: 20px;
 }
 
-/* Flexbox for the profile and name */
-.profile {
-    display: flex;
-    align-items: center; /* Aligns the items (photo and name) vertically */
-    justify-content: flex-start; /* Aligns the items horizontally */
+/* Profile Photo on the Left */
+.profile-photo-container {
+    flex: 1; 
+}
+
+/* Name in the Center */
+.name-info {
+    flex: 1;
+    text-align: center;
+}
+
+/* Contact Info on the Right */
+.contact-info {
+    flex: 1;
+    text-align: right; 
 }
 
 /* Profile Photo Styling */
 .profile-photo {
-    width: 150px; /* Adjust size if necessary */
+    width: 150px; 
     height: 150px;
     border-radius: 50%; /* Makes the image circular */
     object-fit: cover; /* Ensures the image fits the container without distortion */
     margin-right: 20px;
-}
-
-/* Name and Contact Information */
-.name-info {
-    flex-direction: column;
 }
 
 h1 {
