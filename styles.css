@@ -33,7 +33,9 @@ header {
 
 /* Profile Photo on the Left */
 .profile-photo-container {
-    flex: 1; 
+    position: relative;
+    width: 150px;
+    height: 150px;
 }
 
 /* Name in the Center */
@@ -48,13 +50,19 @@ header {
     text-align: right; 
 }
 
-/* Profile Photo Styling */
+/* Default GIF */
 .profile-photo {
-    width: 150px; 
-    height: 150px;
-    border-radius: 50%; /* Makes the image circular */
-    object-fit: cover; /* Ensures the image fits the container without distortion */
-    margin-right: 20px;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%; 
+    object-fit: cover; 
+    transition: all 0.3s ease-in-out; 
+}
+
+/* Hover effect: Show local profile picture */
+.profile-photo-container:hover .profile-photo {
+    content: url('Profile.jpg'); 
+    opacity: 0.8;
 }
 
 h1 {
