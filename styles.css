@@ -86,15 +86,12 @@ header {
     display: none; /* Hide contact info initially */
 }
 
-/* Styling for Icons */
-.contact-info i {
-    margin-right: 5px;
-}
-
 /* Styling for the toggle button */
 .toggle-button {
     cursor: pointer;
-    font-size: 1.5rem;
+    font-size: 5rem;
+    width: 150px;
+    height: 150px;
     color: #00aaff;
     margin-left: auto;
 }
