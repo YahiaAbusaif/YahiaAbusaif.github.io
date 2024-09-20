@@ -11,21 +11,28 @@
     <div class="background-container">
         <header>
             <div class="profile-photo-container">
-                <img src="https://cdn.sanity.io/images/ordgikwe/production/a830c5182852e35bcd0dc07b90122f07ecd15f48-700x525.gif?w=700&h=525&auto=format" alt="Profile GIF" class="profile-photo">
+                <img src="https://cdn.sanity.io/images/ordgikwe/production/a830c5182852e35bcd0dc07b90122f07ecd15f48-700x525.gif?w=700&h=525&auto=format" alt="Profile GIF" class="profile-photo gif">
+                <img src="Profile.jpg" alt="Profile Picture" class="profile-photo photo">
             </div>
             <div class="name-info">
                 <h1>Yahia Abusaif</h1>
             </div>
             <div class="contact-info">
-                <p>Cairo, Egypt</p>
-                <p><a href="mailto:Yahiaali2014.ya@gmail.com">Yahiaali2014.ya@gmail.com</a></p>
+                <p><i class="fas fa-map-marker-alt"></i> Cairo, Egypt</p>
+                <p><i class="fas fa-envelope"></i> <a href="mailto:Yahiaali2014.ya@gmail.com">Yahiaali2014.ya@gmail.com</a></p>
                 <p>
-                    <a href="https://www.linkedin.com/in/yahiaabusaif/">LinkedIn</a> | 
-                    <a href="https://github.com/YahiaAbusaif">GitHub</a> | 
-                    <a href="https://heylink.me/yahiaali2014.ya/">Link Tree</a>
+                    <i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/yahiaabusaif/">LinkedIn</a> |
+                    <i class="fab fa-github"></i> <a href="https://github.com/YahiaAbusaif">GitHub</a> |
+                    <i class="fas fa-link"></i> <a href="https://heylink.me/yahiaali2014.ya/">Link Tree</a>
                 </p>
             </div>
+            <div class="toggle-button">
+                <i class="fas fa-user-circle"></i> <!-- This is the button to toggle contact info -->
+            </div>
         </header>
+        
+        <!-- Link to Font Awesome -->
+        <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 
     <section id="summary">
         <h2>Professional Summary</h2>
@@ -96,4 +103,19 @@
     </footer>
 </div>
 </body>
+<script>
+    // Get the toggle button and contact info section
+    const toggleButton = document.querySelector('.toggle-button');
+    const contactInfo = document.querySelector('.contact-info');
+
+    // Add click event listener to the button
+    toggleButton.addEventListener('click', () => {
+        // Toggle the display of the contact-info section
+        if (contactInfo.style.display === 'none' || contactInfo.style.display === '') {
+            contactInfo.style.display = 'block'; // Show the contact info
+        } else {
+            contactInfo.style.display = 'none'; // Hide the contact info
+        }
+    });
+</script>
 </html>

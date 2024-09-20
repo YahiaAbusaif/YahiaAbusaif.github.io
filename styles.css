@@ -23,47 +23,86 @@ body {
     padding: 20px;
 }
 
-/* Header Section for Desktop View */
+/* Header Section */
 header {
     display: flex;
-    justify-content: space-between; /* Distributes space between photo, name, and contact info */
-    align-items: center; /* Vertically aligns the items */
+    justify-content: space-between; /* Distribute space between image, name, and contact info */
+    align-items: center;
     margin-bottom: 20px;
 }
 
-/* Profile Photo on the Left */
+/* Profile Photo Container */
 .profile-photo-container {
     position: relative;
     width: 150px;
     height: 150px;
 }
 
+/* Default GIF */
+.profile-photo.gif {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    opacity: 1; /* Visible by default */
+    transition: opacity 0.5s ease-in-out; /* Smooth transition */
+}
+
+/* Local Profile Picture (Hidden by default) */
+.profile-photo.photo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    opacity: 0; /* Hidden initially */
+    transition: opacity 0.5s ease-in-out; /* Smooth transition */
+}
+
+/* On hover, hide the GIF and show the photo */
+.profile-photo-container:hover .gif {
+    opacity: 0; /* Fade out the GIF */
+}
+
+.profile-photo-container:hover .photo {
+    opacity: 1; /* Fade in the local profile picture */
+}
+
 /* Name in the Center */
 .name-info {
     flex: 1;
-    text-align: center;
+    text-align: center; /* Center the name horizontally */
 }
 
 /* Contact Info on the Right */
 .contact-info {
     flex: 1;
-    text-align: right; 
+    text-align: right; /* Aligns the contact info to the right */
+    display: none;
 }
 
-/* Default GIF */
-.profile-photo {
-    width: 100%;
-    height: 100%;
-    border-radius: 50%; 
-    object-fit: cover; 
-    transition: all 0.3s ease-in-out; 
+/* Styling for Icons */
+.contact-info i {
+    margin-right: 5px; /* Adds space between icon and text */
 }
 
-/* Hover effect: Show local profile picture */
-.profile-photo-container:hover .profile-photo {
-    content: url('Profile.jpg'); 
-    opacity: 0.8;
+/* Styling for the toggle button */
+.toggle-button {
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: #00aaff;
+    margin-left: auto; /* Align the button to the right */
 }
+
+.toggle-button:hover {
+    color: #007acc;
+}
+
 
 h1 {
     font-size: 2.5rem;
@@ -116,20 +155,24 @@ ul, ol {
 
 /* Responsive Design - Mobile Layout */
 @media (max-width: 768px) {
-    .profile {
-        flex-direction: column; /* Stacks the photo on top of the name for smaller screens */
+    /* Stack photo, name, and contact info vertically */
+    header {
+        flex-direction: column;
         align-items: center;
-        text-align: center; /* Centers the text under the photo */
+        text-align: center; /* Centers text and image */
     }
 
-    .profile-photo {
-        margin-bottom: 15px; /* Adds space between the photo and the name */
+    /* Ensure the profile photo stacks nicely */
+    .profile-photo-container {
+        margin-bottom: 15px;
     }
 
+    /* Adjust name size for mobile */
     h1 {
         font-size: 1.8rem;
     }
 
+    /* Adjust text size for mobile */
     p {
         font-size: 0.9rem;
     }
@@ -139,16 +182,20 @@ ul, ol {
     }
 }
 
+/* Even Smaller Mobile Devices */
 @media (max-width: 480px) {
+    /* Resize profile photo for very small screens */
     .profile-photo {
         width: 80px;
         height: 80px;
     }
 
+    /* Adjust name size */
     h1 {
         font-size: 1.5rem;
     }
 
+    /* Adjust text size */
     p {
         font-size: 0.8rem;
     }
