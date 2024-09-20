@@ -13,16 +13,17 @@ body {
     padding: 20px;
 }
 
-/* Background Image for the page */
+/* Background Image */
 .background-container {
-    background-image: url('background.jpg'); /* Make sure the image path is correct */
-    background-size: cover; /* Makes sure the background covers the entire container */
-    background-position: center; /* Centers the image */
-    background-attachment: fixed; /* Keeps the background fixed while scrolling */
-    min-height: 100vh; /* Ensures the container covers the entire viewport */
+    background-image: url('https://images.alphacoders.com/127/1276993.jpg'); 
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 100vh;
     padding: 20px;
 }
 
+/* Header Section */
 header {
     text-align: left;
     margin-bottom: 20px;
@@ -30,17 +31,12 @@ header {
     align-items: center;
 }
 
-.profile {
-    display: flex;
-    align-items: center;
-}
-
-/* Style for the profile photo */
+/* Profile Photo Styling */
 .profile-photo {
-    width: 150px; /* Adjust size if necessary */
+    width: 150px; 
     height: 150px;
-    border-radius: 50%; /* Makes the photo circular */
-    object-fit: cover; /* Ensures the image fits the container without distortion */
+    border-radius: 50%;
+    object-fit: cover;
     margin-right: 20px;
 }
 
@@ -96,7 +92,7 @@ footer {
 @media (max-width: 768px) {
     header {
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
     }
 
     .profile-photo {
@@ -116,21 +112,12 @@ footer {
     section {
         padding: 15px;
     }
-
-    footer {
-        padding: 15px;
-    }
 }
 
 @media (max-width: 480px) {
-    header {
-        align-items: center;
-    }
-
     .profile-photo {
         width: 80px;
         height: 80px;
-        margin-bottom: 10px;
     }
 
     h1 {
@@ -142,10 +129,6 @@ footer {
     }
 
     section {
-        padding: 10px;
-    }
-
-    footer {
         padding: 10px;
     }
 }
