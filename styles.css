@@ -10,7 +10,7 @@ body {
     background-color: #f4f4f4;
     color: #333;
     line-height: 1.6;
-    padding: 20px;
+    padding: 5px;
 }
 
 /* Background Image */
@@ -25,18 +25,22 @@ body {
 
 /* Header Section */
 header {
-    text-align: left;
     margin-bottom: 20px;
+}
+
+/* Flexbox for the profile and name */
+.profile {
     display: flex;
-    align-items: center;
+    align-items: center; /* Aligns the items (photo and name) vertically */
+    justify-content: flex-start; /* Aligns the items horizontally */
 }
 
 /* Profile Photo Styling */
 .profile-photo {
-    width: 150px; 
+    width: 150px; /* Adjust size if necessary */
     height: 150px;
-    border-radius: 50%;
-    object-fit: cover;
+    border-radius: 50%; /* Makes the image circular */
+    object-fit: cover; /* Ensures the image fits the container without distortion */
     margin-right: 20px;
 }
 
@@ -65,8 +69,8 @@ a:hover {
 
 /* Section Styling */
 section {
-    background: white;
-    padding: 20px;
+    background: rgba(255, 255, 255, 0.6); /* 60% white, 40% transparent */
+    padding: 40px;
     margin-bottom: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -81,24 +85,23 @@ h2 {
 
 /* Footer Styling */
 footer {
+    background: rgba(21, 183, 234, 0.6); /* 60% white, 40% transparent */
     text-align: center;
     padding: 10px 0;
-    background: #00aaff;
     color: white;
     margin-top: 20px;
 }
 
 /* Responsive Design - Mobile Layout */
 @media (max-width: 768px) {
-    header {
-        flex-direction: column;
+    .profile {
+        flex-direction: column; /* Stacks the photo on top of the name for smaller screens */
         align-items: center;
+        text-align: center; /* Centers the text under the photo */
     }
 
     .profile-photo {
-        width: 100px;
-        height: 100px;
-        margin-bottom: 15px;
+        margin-bottom: 15px; /* Adds space between the photo and the name */
     }
 
     h1 {
