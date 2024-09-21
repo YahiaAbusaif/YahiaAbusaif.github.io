@@ -83,17 +83,26 @@ header {
 .contact-info {
     flex: 1;
     text-align: right;
-    display: none; /* Hidden by default */
+    visibility: hidden; /* Keep space but hide */
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.5s ease;
 }
 
+/* When visible, make the contact-info visible */
+.contact-info.visible {
+    visibility: visible;
+    opacity: 1; /* Fade in */
+}
+
+/* Styling for the toggle button */
 /* Styling for the toggle button */
 .toggle-button {
     cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 40px; /* Reduced size */
-    height: 40px; /* Reduced size */
+    width: 160px;
+    height: 80px;
 }
 
 /* Styling for the image */

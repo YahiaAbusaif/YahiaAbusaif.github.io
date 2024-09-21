@@ -107,20 +107,15 @@
         <p>© 2024 Yahia Abusaif</p>
     </footer>
 </div>
+
 <script>
-    // Get the toggle button and contact info section
     const toggleButton = document.querySelector('.toggle-button');
     const contactInfo = document.querySelector('.contact-info');
 
-    // Add click event listener to the button
     toggleButton.addEventListener('click', () => {
-        // Check if contact info is hidden and toggle it
-        if (contactInfo.style.display === 'none' || contactInfo.style.display === '') {
-            contactInfo.style.display = 'block'; // Show the contact info
-        } else {
-            contactInfo.style.display = 'none'; // Hide the contact info
-        }
+        contactInfo.classList.toggle('visible'); // Toggle the 'visible' class
     });
 </script>
+
 </body>
 </html>
