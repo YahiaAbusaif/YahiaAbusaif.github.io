@@ -83,7 +83,7 @@ header {
 .contact-info {
     flex: 1;
     text-align: right;
-    display: none; /* Hide contact info initially */
+    display: none;
 }
 
 /* Styling for the toggle button */
@@ -92,8 +92,8 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 50px;
-    height: 50px;
+    width: 80px; /* Increased size */
+    height: 80px; /* Increased size */
 }
 
 /* Styling for the image */
@@ -103,12 +103,13 @@ header {
     object-fit: cover; /* Ensures the image fits the container without distortion */
 }
 
-
+/* Heading Style */
 h1 {
     font-size: 2.5rem;
     margin-bottom: 10px;
 }
 
+/* Header Text */
 header p {
     margin: 5px 0;
 }
@@ -155,7 +156,6 @@ ul, ol {
 
 /* Responsive Design - Mobile Layout */
 @media (max-width: 768px) {
-    /* Stack photo, name, and contact info vertically */
     header {
         flex-direction: column;
         align-items: center;
