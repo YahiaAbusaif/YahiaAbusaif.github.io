@@ -1,144 +1,146 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Yahia Abusaif - Software Developer Portfolio">
-    <title>Yahia Abusaif - Software Developer</title>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Yahia Abusaif - Software Developer Portfolio">
+        <title>Yahia Abusaif - Software Developer</title>
 
-    <!-- Link to Font Awesome if you want to use icons -->
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+        <!-- Link to Font Awesome if you want to use icons -->
+        <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 
-    <!-- Link to your stylesheet -->
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <div class="background-container">
-        <header>
-            <div class="profile-photo-container">
-                <img src="https://cdn.sanity.io/images/ordgikwe/production/a830c5182852e35bcd0dc07b90122f07ecd15f48-700x525.gif?w=700&h=525&auto=format" alt="Profile GIF" class="profile-photo gif">
-                <img src="Profile.jpg" alt="Profile Picture" class="profile-photo photo">
-            </div>
-            <div class="name-info">
-                <h1>Yahia Abusaif</h1>
-            </div>
-
-            <div class="contact-container">
-                <div class="contact-info">
-                    <p><i class="fas fa-map-marker-alt"></i> Cairo, Egypt</p>
-                    <p><i class="fas fa-envelope"></i> <a href="mailto:Yahiaali2014.ya@gmail.com">Yahiaali2014.ya@gmail.com</a></p>
-                    <p>
-                        <i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/yahiaabusaif/">LinkedIn</a> |
-                        <i class="fab fa-github"></i> <a href="https://github.com/YahiaAbusaif">GitHub</a> |
-                        <i class="fas fa-link"></i> <a href="https://heylink.me/yahiaali2014.ya/">Link Tree</a>
-                    </p>
+        <!-- Link to your stylesheet -->
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <div class="background-container">
+            <header>
+                <div class="profile-photo-container">
+                    <img src="https://cdn.sanity.io/images/ordgikwe/production/a830c5182852e35bcd0dc07b90122f07ecd15f48-700x525.gif?w=700&h=525&auto=format" alt="Profile GIF" class="profile-photo gif">
+                    <img src="Profile.jpg" alt="Profile Picture" class="profile-photo photo">
                 </div>
-                <div class="toggle-button">
-                    <img src="https://static-00.iconduck.com/assets.00/contact-card-icon-2048x1536-0iq1rlzj.png" alt="Toggle Button" class="toggle-image">
+                <div class="name-info">
+                    <h1>Yahia Abusaif</h1>
                 </div>
-            </div>
-        </header>
 
-        <section id="summary">
-            <h2 class="section-header">Summary</h2>
-            <div class="section-content">
-                <p>Software Developer with 3 years of experience building and optimizing applications using C#, Flutter, and cloud services. Skilled in developing end-to-end solutions, integrating third-party services, and enhancing user experience. Proven track record in managing data-driven projects, leading cross-functional teams, and delivering impactful software solutions.</p>
-            </div>
-        </section>
+                <div class="contact-container">
+                    <div class="contact-info">
+                        <p><i class="fas fa-map-marker-alt"></i> Cairo, Egypt</p>
+                        <p><i class="fas fa-envelope"></i> <a href="mailto:Yahiaali2014.ya@gmail.com">Yahiaali2014.ya@gmail.com</a></p>
+                        <p>
+                            <i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/yahiaabusaif/">LinkedIn</a> |
+                            <i class="fab fa-github"></i> <a href="https://github.com/YahiaAbusaif">GitHub</a> |
+                            <i class="fas fa-link"></i> <a href="https://heylink.me/yahiaali2014.ya/">Link Tree</a>
+                        </p>
+                    </div>
+                    <div class="toggle-button" onclick="toggleContactInfo()">
+                        <img src="https://static-00.iconduck.com/assets.00/contact-card-icon-2048x1536-0iq1rlzj.png" alt="Toggle Button" class="toggle-image">
+                    </div>
+                </div>
+            </header>
 
-        <section id="experience">
-            <h2 class="section-header">Professional Experience</h2>
-            <div class="section-content">
-                <h3>Software Development Engineer</h3>
-                <p><strong>Microsoft</strong> - Cairo, Egypt (May 2024 – Present)</p>
-                <ul>
-                    <li>Developed a multi-stage automated pipeline to validate and filter shopping domains, reducing the domain list size by 71%, significantly improving system efficiency.</li>
-                    <li>Designed and implemented a Campaign State Management Service for efficient cashback campaign management.</li>
-                    <li>Introduced a rollback mechanism for the cashback information extraction system database to enhance data reliability.</li>
-                </ul>
+            <!-- Expandable Sections -->
+            <section id="summary">
+                <h2 class="section-header" onclick="toggleSection(this)">Summary</h2>
+                <div class="section-content">
+                    <p>Software Developer with 3 years of experience building and optimizing applications using C#, Flutter, and cloud services. Skilled in developing end-to-end solutions, integrating third-party services, and enhancing user experience. Proven track record in managing data-driven projects, leading cross-functional teams, and delivering impactful software solutions.</p>
+                </div>
+            </section>
 
-                <h3>Software Development Engineer</h3>
-                <p><strong>Sahl</strong> - Giza, Egypt (Jan 2022 – April 2024)</p>
-                <ul>
-                    <li>Spearheaded the integration of major service providers, enhancing platform capabilities and expanding customer reach.</li>
-                    <li>Designed and launched an automated notification service, reducing manual workload and increasing retention rates by 12%.</li>
-                    <li>Developed key features such as biometric login, advanced account settings, and transaction history, increasing customer conversion rates by 19%.</li>
-                    <li>Organized and facilitated Agile ceremonies, leading to improved collaboration and smoother project delivery.</li>
-                </ul>
-            </div>
-        </section>
+            <section id="experience">
+                <h2 class="section-header" onclick="toggleSection(this)">Professional Experience</h2>
+                <div class="section-content">
+                    <h3>Software Development Engineer</h3>
+                    <p><strong>Microsoft</strong> - Cairo, Egypt (May 2024 – Present)</p>
+                    <ul>
+                        <li>Developed a multi-stage automated pipeline to validate and filter shopping domains, reducing the domain list size by 71%, significantly improving system efficiency.</li>
+                        <li>Designed and implemented a Campaign State Management Service for efficient cashback campaign management.</li>
+                        <li>Introduced a rollback mechanism for the cashback information extraction system database to enhance data reliability.</li>
+                    </ul>
 
-        <section id="education">
-            <h2 class="section-header">Education</h2>
-            <div class="section-content">
-                <p><strong>Bachelor's in Computer Engineering</strong>, Cairo University (2015 – 2020)</p>
-                <ul>
-                    <li>Graduation Project: Desktop application for satellite image segmentation and illegal building detection.</li>
-                    <li>Hand Sign Game: Real-time interactive game using Python and a camera.</li>
-                    <li>Sports Club Database: Migrated a sports club database from SQL to NoSQL for performance comparison.</li>
-                </ul>
-            </div>
-        </section>
+                    <h3>Software Development Engineer</h3>
+                    <p><strong>Sahl</strong> - Giza, Egypt (Jan 2022 – April 2024)</p>
+                    <ul>
+                        <li>Spearheaded the integration of major service providers, enhancing platform capabilities and expanding customer reach.</li>
+                        <li>Designed and launched an automated notification service, reducing manual workload and increasing retention rates by 12%.</li>
+                        <li>Developed key features such as biometric login, advanced account settings, and transaction history, increasing customer conversion rates by 19%.</li>
+                        <li>Organized and facilitated Agile ceremonies, leading to improved collaboration and smoother project delivery.</li>
+                        <li>Collaborated with marketing and product teams to integrate customer data platforms (Segment, Google Analytics, Mixpanel), enabling targeted campaigns and data-driven decision-making.</li>
+                        <li>Enhanced app performance and usability through state management improvements, optimized navigation, and refined UI/UX.</li>
 
-        <section id="skills">
-            <h2 class="section-header">Technical Skills</h2>
-            <div class="section-content">
-                <ul>
-                    <li>Programming Languages: C#, Python, Dart, C++.</li>
-                    <li>Frameworks & Tools: .NET Core, Flutter, Entity Framework, REST API.</li>
-                    <li>Databases: SQL, NoSQL (DynamoDB, Cosmos).</li>
-                    <li>Cloud Platforms: AWS, Azure, Firebase.</li>
-                    <li>Other Skills: Git, Microservices, Data Analysis, Testing, Agile Methodologies.</li>
-                </ul>
-            </div>
-        </section>
+                    </ul>
+                </div>
+            </section>
 
-        <section id="projects">
-            <h2 class="section-header">Projects</h2>
-            <div class="section-content">
-                <ul>
-                    <li><a href="http://github.com/OmarKimo/Eagle-Eye-Graduation-Project">Eagle Eye - Graduation Project</a></li>
-                    <li><a href="https://github.com/OmarKimo/Hand-Sign-game">Hand Sign Game</a></li>
-                    <li><a href="https://github.com/YahiaAbusaif/collection/tree/master/Advanced%20Database%20Systems%20Project">Advanced Database Systems Project</a></li>
-                    <li><a href="https://github.com/YahiaAbusaif/DotNetMosh">DotNetMosh Repository</a></li>
-                </ul>
-            </div>
-        </section>
+            <section id="education">
+                <h2 class="section-header" onclick="toggleSection(this)">Education</h2>
+                <div class="section-content">
+                    <p><strong>Bachelor's in Computer Engineering</strong>, Cairo University (2015 – 2020)</p>
+                    <ul>
+                        <li>Graduation Project: Desktop application for satellite image segmentation and illegal building detection.</li>
+                        <li>Hand Sign Game: Real-time interactive game using Python and a camera.</li>
+                        <li>Sports Club Database: a desktop application using C#  to handle the club database, used SQL Database, then migrated to NoSQL to compare the performance.</li>
+                    </ul>
+                </div>
+            </section>
 
-        <section id="languages">
-            <h2 class="section-header">Languages</h2>
-            <div class="section-content">
-                <ul>
-                    <li>Arabic (Native)</li>
-                    <li>English (Fluent)</li>
-                </ul>
-            </div>
-        </section>
+            <section id="skills">
+                <h2 class="section-header" onclick="toggleSection(this)">Technical Skills</h2>
+                <div class="section-content">
+                    <ul>
+                        <li>Programming Languages: C#, Python, Dart, C++.</li>
+                        <li>Frameworks & Tools: .NET Core, Flutter, Entity Framework, REST API.</li>
+                        <li>Databases: SQL, NoSQL (DynamoDB, Cosmos).</li>
+                        <li>Cloud Platforms: AWS, Azure, Firebase.</li>
+                        <li>Other Skills: Git, Microservices, Data Analysis, Testing, Agile Methodologies.</li>
+                    </ul>
+                </div>
+            </section>
 
-        <footer>
-            <p>© 2024 Yahia Abusaif</p>
-        </footer>
-    </div>
+            <section id="projects">
+                <h2 class="section-header" onclick="toggleSection(this)">Projects</h2>
+                <div class="section-content">
+                    <ul>
+                        <li><a href="http://github.com/OmarKimo/Eagle-Eye-Graduation-Project">Eagle Eye - Graduation Project</a></li>
+                        <li><a href="https://github.com/OmarKimo/Hand-Sign-game">Hand Sign Game</a></li>
+                        <li><a href="https://github.com/YahiaAbusaif/collection/tree/master/Advanced%20Database%20Systems%20Project">Advanced Database Systems Project</a></li>
+                        <li><a href="https://github.com/YahiaAbusaif/DotNetMosh">DotNetMosh Repository</a></li>
+                    </ul>
+                </div>
+            </section>
 
-    <script>
-        // Select all headers with the class 'section-header'
-        const headers = document.querySelectorAll('.section-header');
+            <section id="languages">
+                <h2 class="section-header" onclick="toggleSection(this)">Languages</h2>
+                <div class="section-content">
+                    <ul>
+                        <li>Arabic (Native)</li>
+                        <li>English (Fluent)</li>
+                    </ul>
+                </div>
+            </section>
 
-        headers.forEach(header => {
-            header.addEventListener('click', () => {
-                // Toggle the active class on the clicked header
-                header.classList.toggle('active');
+            <footer>
+                <p>© 2024 Yahia Abusaif</p>
+            </footer>
+        </div>
 
-                // Get the next element (the content section) and toggle its visibility
+        <!-- Script to toggle section expansion and contact info -->
+        <script>
+            // Toggle visibility of contact info
+            function toggleContactInfo() {
+                const contactInfo = document.querySelector('.contact-info');
+                contactInfo.classList.toggle('visible');
+            }
+
+            // Toggle expandable sections
+            function toggleSection(header) {
                 const content = header.nextElementSibling;
-
                 if (content.style.display === "block") {
-                    content.style.display = "none"; // Collapse
+                    content.style.display = "none";
                 } else {
-                    content.style.display = "block"; // Expand
+                    content.style.display = "block";
                 }
-            });
-        });
-    </script>
-</body>
+            }
+        </script>
+    </body>
 </html>
