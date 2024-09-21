@@ -15,7 +15,7 @@ body {
 
 /* Background Image */
 .background-container {
-    background-image: url('https://images.alphacoders.com/127/1276993.jpg');
+    background-image: 'Background.gif';
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -211,11 +211,16 @@ ul, ol {
 
 /* Responsive Design - Mobile Layout */
 @media (max-width: 768px) {
+    .background-container {
+        background-image: url('https://images.alphacoders.com/127/1276993.jpg');
+    }
+
     header {
         flex-direction: column;
         align-items: center;
         text-align: center;
         flex-wrap: wrap;
+        gap: 20px; /* Increase the gap between header flex items */
     }
 
     .profile-photo-container {
