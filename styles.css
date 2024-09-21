@@ -41,7 +41,8 @@ header {
 
 /* Profile Photo Container */
 .profile-photo-container {
-    position: relative;
+    justify-content: flex-start;
+    align-items: center;
     width: 150px;
     height: 150px;
 }
@@ -90,6 +91,7 @@ header {
 /* Contact Container (wraps contact info and toggle button) */
 .contact-container {
     display: flex;
+    justify-content: flex-end;
     align-items: center;
     flex-shrink: 0; /* Prevents the container from shrinking */
 }
