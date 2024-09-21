@@ -30,6 +30,7 @@ header {
     align-items: center;
     padding: 15px;
     margin: 10px; 
+    background: rgba(255, 255, 255, 0.1);
 }
 
 /* Each section gets an equal amount of space */
