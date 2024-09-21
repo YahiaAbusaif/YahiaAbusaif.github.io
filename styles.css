@@ -31,6 +31,14 @@ header {
     margin-bottom: 20px;
 }
 
+
+/* Each section gets an equal amount of space */
+.profile-photo-container,
+.name-info,
+.contact-container {
+    flex: 1; /* Equal space for all containers */
+}
+
 /* Profile Photo Container */
 .profile-photo-container {
     position: relative;
