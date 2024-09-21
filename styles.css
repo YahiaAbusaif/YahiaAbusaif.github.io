@@ -15,7 +15,7 @@ body {
 
 /* Background Image */
 .background-container {
-    background-image: 'Background.gif';
+    background-image: url('https://images.alphacoders.com/127/1276993.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -212,7 +212,7 @@ ul, ol {
 /* Responsive Design - Mobile Layout */
 @media (max-width: 768px) {
     .background-container {
-        background-image: url('https://images.alphacoders.com/127/1276993.jpg');
+        background-image: url('https://preview.redd.it/beautiful-nature-4k-mobile-wallpapers-pack-download-link-in-v0-9txew1f4a9hd1.jpeg?auto=webp&s=b7d20d29b9959040b2161f982fc4f265874eb1fa');
     }
 
     header {
@@ -220,7 +220,7 @@ ul, ol {
         align-items: center;
         text-align: center;
         flex-wrap: wrap;
-        gap: 20px; /* Increase the gap between header flex items */
+        gap: 80px;
     }
 
     .profile-photo-container {
