@@ -31,7 +31,6 @@ header {
     margin-bottom: 20px;
 }
 
-
 /* Each section gets an equal amount of space */
 .profile-photo-container,
 .name-info,
@@ -43,8 +42,8 @@ header {
 .profile-photo-container {
     justify-content: flex-start;
     align-items: center;
-    width: 150px;
-    height: 150px;
+    display: flex;
+    flex-shrink: 0; 
 }
 
 /* Default GIF */
