@@ -10,7 +10,7 @@ body {
     background-color: #f4f4f4;
     color: #333;
     line-height: 1.6;
-    padding: 0px;
+    padding: 0;
 }
 
 /* Background Image */
@@ -38,7 +38,7 @@ header {
 .profile-photo-container,
 .name-info,
 .contact-container {
-    flex: 1; /* Equal space for all containers */
+    flex: 1;
 }
 
 /* Profile Photo Container */
@@ -93,21 +93,21 @@ header {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    flex-shrink: 0; /* Prevents the container from shrinking */
+    flex-shrink: 0;
 }
 
 /* Contact Info on the Right (hidden initially) */
 .contact-info {
-    margin-right: 15px; /* Adds space between the contact info and the toggle button */
-    visibility: hidden; /* Keep space but hide */
-    opacity: 0; /* Initially hidden */
+    margin-right: 15px;
+    visibility: hidden;
+    opacity: 0;
     transition: opacity 0.5s ease;
 }
 
 /* When visible, make the contact-info visible */
 .contact-info.visible {
     visibility: visible;
-    opacity: 1; /* Fade in */
+    opacity: 1;
 }
 
 /* Styling for the toggle button */
@@ -156,11 +156,42 @@ section {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-h2 {
+/* Collapsible Section Headers */
+.section-header {
+    cursor: pointer;
+    font-size: 1.8rem;
     color: #333;
     border-bottom: 2px solid #00aaff;
     padding-bottom: 10px;
     margin-bottom: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.section-header:hover {
+    background-color: rgba(0, 170, 255, 0.1);
+}
+
+/* Collapsible Section Content */
+.section-content {
+    display: none;
+    padding-top: 10px;
+}
+
+.section-header.active + .section-content {
+    display: block;
+    animation: expand 0.3s ease-out;
+}
+
+/* Animation for expansion */
+@keyframes expand {
+    from { 
+        opacity: 0; 
+        transform: scaleY(0); 
+    }
+    to { 
+        opacity: 1; 
+        transform: scaleY(1); 
+    }
 }
 
 /* Footer Styling */
@@ -184,26 +215,26 @@ ul, ol {
         flex-direction: column;
         align-items: center;
         text-align: center;
-        flex-wrap: wrap; /* Allow wrapping on smaller screens */
+        flex-wrap: wrap;
     }
 
     .profile-photo-container {
         margin-bottom: 15px;
-        width: 100%; /* Make it take full width on mobile */
+        width: 100%;
         display: flex;
-        justify-content: center; /* Center the profile photo */
+        justify-content: center;
     }
 
     .name-info {
-        width: 100%; /* Ensure it takes full width on mobile */
+        width: 100%;
         margin-bottom: 10px;
     }
 
     .contact-container {
-        width: 100%; /* Take full width */
-        flex-direction: column; /* Stack elements vertically */
-        justify-content: center; /* Center elements */
-        margin-bottom: 15px; /* Add space between the sections */
+        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+        margin-bottom: 15px;
     }
 
     .toggle-button {
