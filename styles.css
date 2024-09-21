@@ -48,22 +48,26 @@ header {
 
 /* Default GIF */
 .profile-photo.gif {
-    object-fit: contain; 
-    width: 250px;
-    height: 250px;
+    position: absolute;
+    top: 0;
+    left: 0;
     border-radius: 50%;
-    object-fit: cover;
+    object-fit: contain; 
     opacity: 1;
+    width: 200px;
+    height: 200px;
     transition: opacity 0.7s ease-in-out;
 }
 
 /* Local Profile Picture (Hidden by default) */
 .profile-photo.photo {
-    object-fit: contain; 
-    width: 250px;
-    height: 250px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: 200px;
     border-radius: 50%;
-    object-fit: cover;
+    object-fit: contain;
     opacity: 0;
     transition: opacity 0.7s ease-in-out;
 }
