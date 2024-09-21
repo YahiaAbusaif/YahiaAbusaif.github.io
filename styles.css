@@ -15,7 +15,7 @@ body {
 
 /* Background Image */
 .background-container {
-    background-image: url('https://images.alphacoders.com/127/1276993.jpg'); 
+    background-image: url('https://images.alphacoders.com/127/1276993.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -83,7 +83,7 @@ header {
 .contact-info {
     flex: 1;
     text-align: right;
-    display: none;
+    display: none; /* Hidden by default */
 }
 
 /* Styling for the toggle button */
@@ -92,8 +92,8 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 80px; /* Increased size */
-    height: 80px; /* Increased size */
+    width: 40px; /* Reduced size */
+    height: 40px; /* Reduced size */
 }
 
 /* Styling for the image */
@@ -150,7 +150,7 @@ footer {
 
 /* List Styling */
 ul, ol {
-    margin-left: 15px; 
+    margin-left: 15px;
     padding-left: 5px;
 }
 
