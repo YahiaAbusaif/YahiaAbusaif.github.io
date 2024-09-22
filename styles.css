@@ -220,14 +220,25 @@ ul, ol {
         align-items: center;
         text-align: center;
         flex-wrap: wrap;
-        gap: 80px;
+        gap: 120px;
     }
 
     .profile-photo-container {
         margin-bottom: 15px;
         width: 100%;
         display: flex;
-        justify-content: center;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    /* Default GIF */
+    .profile-photo.gif {
+        top: 50;
+    }
+
+    /* Local Profile Picture (Hidden by default) */
+    .profile-photo.photo {
+        top: 50;
     }
 
     .name-info {
@@ -243,7 +254,7 @@ ul, ol {
     }
 
     .toggle-button {
-        margin-top: 10px;
+        margin-bottom: 10px;
     }
 }
 
