@@ -233,12 +233,12 @@ ul, ol {
 
     /* Default GIF */
     .profile-photo.gif {
-        top: 50;
+        top: 0;
     }
 
     /* Local Profile Picture (Hidden by default) */
     .profile-photo.photo {
-        top: 50;
+        top: 0;
     }
 
     .name-info {
