@@ -255,6 +255,12 @@ ul, ol {
 
     .toggle-button {
         margin-bottom: 10px;
+        opacity: 0;
+    }
+
+    .contact-info {
+        visibility: none;
+        opacity: 1;
     }
 }
 
