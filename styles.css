@@ -220,25 +220,23 @@ ul, ol {
         align-items: center;
         text-align: center;
         flex-wrap: wrap;
-        gap: 120px;
+        gap: 20px;
     }
 
+    /* Centering profile image */
     .profile-photo-container {
-        margin-bottom: 15px;
         width: 100%;
         display: flex;
-        justify-content: flex-start;
+        justify-content: center; /* Center horizontally */
         align-items: center;
+        margin-bottom: 15px;
     }
 
-    /* Default GIF */
-    .profile-photo.gif {
-        top: 0;
-    }
-
-    /* Local Profile Picture (Hidden by default) */
+    /* Adjusting image positioning */
+    .profile-photo.gif,
     .profile-photo.photo {
-        top: 0;
+        position: static; /* Remove absolute positioning */
+        margin: 0 auto; /* Center the images */
     }
 
     .name-info {
@@ -246,21 +244,15 @@ ul, ol {
         margin-bottom: 10px;
     }
 
-    .contact-container {
-        width: 100%;
-        flex-direction: column;
-        justify-content: center;
-        margin-bottom: 15px;
+    /* Ensure contact info is always visible */
+    .contact-info {
+        visibility: visible !important;
+        opacity: 1 !important;
+        display: block; /* Ensure it displays */
     }
 
     .toggle-button {
-        margin-bottom: 10px;
-        opacity: 0;
-    }
-
-    .contact-info {
-        visibility: none;
-        opacity: 1;
+        display: none; /* Hide toggle button on mobile */
     }
 }
 
@@ -281,10 +273,5 @@ ul, ol {
 
     section {
         padding: 10px;
-    }
-
-    .toggle-button {
-        width: 120px;
-        height: 80px;
     }
 }
