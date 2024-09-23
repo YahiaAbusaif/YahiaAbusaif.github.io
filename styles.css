@@ -233,7 +233,10 @@ ul, ol {
     }
 
     /* Adjusting image positioning */
-    .profile-photo.gif,
+    .profile-photo.gif{
+        display: none; 
+    }
+
     .profile-photo.photo {
         position: static; /* Remove absolute positioning */
         margin: 0 auto; /* Center the images */
