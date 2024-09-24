@@ -240,6 +240,7 @@ ul, ol {
     .profile-photo.photo {
         position: static; /* Remove absolute positioning */
         margin: 0 auto; /* Center the images */
+        display: block;
     }
 
     .name-info {
