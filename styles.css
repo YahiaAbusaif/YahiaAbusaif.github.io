@@ -1,4 +1,28 @@
-/* General Reset */
+/* ===============================
+   GLOBAL VARIABLES (Light & Dark)
+   =============================== */
+:root {
+    --bg-color: #f4f4f4;
+    --text-color: #333;
+    --section-bg: rgba(255, 255, 255, 0.6);
+    --header-bg: rgba(255, 255, 255, 0.1);
+    --accent-color: #00aaff;
+    --footer-bg: rgba(21, 183, 234, 0.6);
+}
+
+/* Dark theme variables */
+body.dark-theme {
+    --bg-color: #121212;
+    --text-color: #eaeaea;
+    --section-bg: rgba(32, 32, 32, 0.9);
+    --header-bg: rgba(40, 40, 40, 0.9);
+    --accent-color: #4db8ff;
+    --footer-bg: rgba(0, 122, 204, 0.8);
+}
+
+/* ===============================
+   GENERAL RESET & BASE STYLES
+   =============================== */
 * {
     margin: 0;
     padding: 0;
@@ -7,13 +31,14 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
+    background-color: var(--bg-color);
+    color: var(--text-color);
     line-height: 1.6;
-    padding: 0;
 }
 
-/* Background Image */
+/* ===============================
+   BACKGROUND CONTAINER
+   =============================== */
 .background-container {
     background-image: url('https://images.alphacoders.com/127/1276993.jpg');
     background-size: cover;
@@ -23,7 +48,9 @@ body {
     padding: 20px;
 }
 
-/* Header Section */
+/* ===============================
+   HEADER SECTION
+   =============================== */
 header {
     display: flex;
     justify-content: space-between;
@@ -31,29 +58,27 @@ header {
     padding: 15px;
     margin-bottom: 20px;
     border-radius: 8px;
-    background: rgba(255, 255, 255, 0.1);
+    background: var(--header-bg);
 }
 
-/* Each section gets an equal amount of space */
 .profile-photo-container,
 .name-info,
 .contact-container {
     flex: 1;
 }
 
-/* Profile Photo Container */
+/* Profile photo hover effect */
 .profile-photo-container {
     justify-content: flex-start;
     align-items: center;
     display: flex;
-    flex-shrink: 0; 
+    flex-shrink: 0;
 }
 
-/* Default GIF */
 .profile-photo.gif {
     position: absolute;
-    top: 25;
-    left: 25;
+    top: 25px;
+    left: 25px;
     width: 120px;
     height: 120px;
     border-radius: 50%;
@@ -61,11 +86,10 @@ header {
     transition: opacity 0.7s ease-in-out;
 }
 
-/* Local Profile Picture (Hidden by default) */
 .profile-photo.photo {
     position: absolute;
-    top: 25;
-    left: 25;
+    top: 25px;
+    left: 25px;
     width: 120px;
     height: 120px;
     border-radius: 50%;
@@ -73,7 +97,6 @@ header {
     transition: opacity 0.7s ease-in-out;
 }
 
-/* On hover, hide the GIF and show the photo */
 .profile-photo-container:hover .gif {
     opacity: 0;
 }
@@ -82,13 +105,14 @@ header {
     opacity: 1;
 }
 
-/* Name in the Center */
+/* ===============================
+   NAME AND CONTACT INFO
+   =============================== */
 .name-info {
     flex: 1;
     text-align: center;
 }
 
-/* Contact Container (wraps contact info and toggle button) */
 .contact-container {
     display: flex;
     justify-content: flex-end;
@@ -96,7 +120,6 @@ header {
     flex-shrink: 0;
 }
 
-/* Contact Info on the Right (hidden initially) */
 .contact-info {
     margin-right: 15px;
     visibility: hidden;
@@ -104,13 +127,12 @@ header {
     transition: opacity 0.5s ease;
 }
 
-/* When visible, make the contact-info visible */
 .contact-info.visible {
     visibility: visible;
     opacity: 1;
 }
 
-/* Styling for the toggle button */
+/* Contact toggle */
 .toggle-button {
     cursor: pointer;
     display: flex;
@@ -120,26 +142,45 @@ header {
     height: 100px;
 }
 
-/* Styling for the image */
 .toggle-image {
     width: 100%;
     height: 100%;
-    object-fit: contain; 
+    object-fit: contain;
 }
 
-/* Heading Style */
+/* ===============================
+   THEME TOGGLE BUTTON
+   =============================== */
+.theme-toggle {
+    background: var(--accent-color);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-weight: bold;
+    margin-left: 20px;
+}
+
+.theme-toggle:hover {
+    opacity: 0.85;
+}
+
+/* ===============================
+   TEXT STYLING
+   =============================== */
 h1 {
     font-size: 2.5rem;
     margin-bottom: 10px;
 }
 
-/* Header Text */
 header p {
     margin: 5px 0;
 }
 
 a {
-    color: #00aaff;
+    color: var(--accent-color);
     text-decoration: none;
 }
 
@@ -147,21 +188,22 @@ a:hover {
     text-decoration: underline;
 }
 
-/* Section Styling */
+/* ===============================
+   SECTIONS
+   =============================== */
 section {
-    background: rgba(255, 255, 255, 0.6);
+    background: var(--section-bg);
     padding: 40px;
     margin-bottom: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Collapsible Section Headers */
 .section-header {
     cursor: pointer;
     font-size: 1.8rem;
-    color: #333;
-    border-bottom: 2px solid #a0d2eb;
+    color: var(--text-color);
+    border-bottom: 2px solid var(--accent-color);
     padding-bottom: 10px;
     margin-bottom: 10px;
     transition: background-color 0.3s ease;
@@ -171,7 +213,7 @@ section {
     background-color: rgba(0, 170, 255, 0.1);
 }
 
-/* Collapsible Section Content */
+/* Collapsible content */
 .section-content {
     display: none;
     padding-top: 10px;
@@ -182,34 +224,39 @@ section {
     animation: expand 0.3s ease-out;
 }
 
-/* Animation for expansion */
 @keyframes expand {
-    from { 
-        opacity: 0; 
-        transform: scaleY(0); 
+    from {
+        opacity: 0;
+        transform: scaleY(0);
     }
-    to { 
-        opacity: 1; 
-        transform: scaleY(1); 
+    to {
+        opacity: 1;
+        transform: scaleY(1);
     }
 }
 
-/* Footer Styling */
+/* ===============================
+   FOOTER
+   =============================== */
 footer {
-    background: rgba(21, 183, 234, 0.6);
+    background: var(--footer-bg);
     text-align: center;
     padding: 10px 0;
     color: white;
     margin-top: 20px;
 }
 
-/* List Styling */
+/* ===============================
+   LISTS
+   =============================== */
 ul, ol {
     margin-left: 15px;
     padding-left: 5px;
 }
 
-/* Responsive Design - Mobile Layout */
+/* ===============================
+   RESPONSIVE DESIGN
+   =============================== */
 @media (max-width: 768px) {
     .background-container {
         background-image: url('https://preview.redd.it/beautiful-nature-4k-mobile-wallpapers-pack-download-link-in-v0-9txew1f4a9hd1.jpeg?auto=webp&s=b7d20d29b9959040b2161f982fc4f265874eb1fa');
@@ -223,23 +270,21 @@ ul, ol {
         gap: 20px;
     }
 
-    /* Centering profile image */
     .profile-photo-container {
         width: 100%;
         display: flex;
-        justify-content: center; /* Center horizontally */
+        justify-content: center;
         align-items: center;
         margin-bottom: 15px;
     }
 
-    /* Adjusting image positioning */
-    .profile-photo.gif{
-        display: none; 
+    .profile-photo.gif {
+        display: none;
     }
 
     .profile-photo.photo {
-        position: static; /* Remove absolute positioning */
-        margin: 0 auto; /* Center the images */
+        position: static;
+        margin: 0 auto;
         display: block;
     }
 
@@ -248,19 +293,21 @@ ul, ol {
         margin-bottom: 10px;
     }
 
-    /* Ensure contact info is always visible */
     .contact-info {
         visibility: visible !important;
         opacity: 1 !important;
-        display: block; /* Ensure it displays */
+        display: block;
     }
 
     .toggle-button {
-        display: none; /* Hide toggle button on mobile */
+        display: none;
+    }
+
+    .theme-toggle {
+        margin-top: 10px;
     }
 }
 
-/* Even Smaller Mobile Devices */
 @media (max-width: 480px) {
     .profile-photo {
         width: 80px;
