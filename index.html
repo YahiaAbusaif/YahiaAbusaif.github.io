@@ -62,7 +62,7 @@
           <i class="fab fa-github"></i>
           <a href="https://github.com/YahiaAbusaif" target="_blank">GitHub</a> |
           <i class="fas fa-globe"></i>
-          <a href="https://heylink.me/yahiaali2014.ya/" target="_blank">Portfolio</a> |
+          <a href="https://heylink.me/yahiaali2014.ya/" target="_blank">Heylink</a> |
           <i class="fas fa-pen-nib"></i>
           <a href="https://yaaabuthoughts.blogspot.com/" target="_blank">Blog</a>
         </p>
@@ -83,13 +83,15 @@
       <h2 class="section-header" onclick="toggleSection(this)">Summary</h2>
       <div class="section-content">
         <p>
-          Senior Software Engineer with 5+ years of accelerated expertise in architecting high-scale distributed systems
-          and rescuing mission-critical legacy platforms. Proven track record at Microsoft and high-growth fintechs,
-          scaling transaction volumes by 40x and reducing operational latency by 90% through rigorous C# (.NET Core)
-          and cloud-native engineering. Passionate about engineering excellence standards and "Document-First" cultures
-          that eliminate production defects and maximize cross-org engineering velocity. Currently seeking a Senior/Lead
-          opportunity with a team that values technical leadership and high-scale architectural experience. Fully mobile
-          and prepared for international relocation.
+          Senior software engineer with 5 years building .NET and AWS backends,
+          from 0-to-1 multi-tenant SaaS to systems already running at scale.
+          At Microsoft, owned a cross-team workstream on a 500k+ domain pipeline:
+          90% less unnecessary data I/O, P0/P1 from 3-5 days to under 6 hours,
+          and 600% editorial throughput. At Sahl, end-to-end owner of the B2C
+          mobile and backend path through 40x transaction growth (2.5k to 100k/day).
+          Now at Qualiphi, technical lead across two pods (greenfield SaaS and legacy),
+          with a Design-First practice of ADRs and design docs. Known for workstream
+          ownership, mentoring, and making the design explicit before the code.
         </p>
       </div>
     </section>
@@ -99,11 +101,11 @@
       <h2 class="section-header" onclick="toggleSection(this)">Technical Profile</h2>
       <div class="section-content">
         <ul>
-          <li><strong>Languages & Frameworks:</strong> C# (.NET 8/Core), Dart (Flutter), Python (Django), React, SQL</li>
+          <li><strong>Languages & Frameworks:</strong> C# (.NET Core), Dart (Flutter), Python (Django), React, SQL</li>
           <li><strong>Cloud & Infrastructure:</strong> AWS (CDK, SQS, EventBridge, Lambda), Azure, Docker, CI/CD</li>
-          <li><strong>Data & AI Engineering:</strong> PostgreSQL, MS SQL, Entity Framework (EF), DynamoDB, Redis, ETL Pipelines, LLM Integration</li>
-          <li><strong>Systems Architecture:</strong> Domain-Driven Design (DDD), Event-Driven (EDA), Multi-tenant SaaS, System Migration, Idempotency Patterns</li>
-          <li><strong>Observability & Security:</strong> Grafana, New Relic, ADRs (Architecture Decision Records)</li>
+          <li><strong>Data & AI Engineering:</strong> PostgreSQL, MS SQL, Entity Framework (EF), DynamoDB, Cosmos DB, Redis, Azure Data Factory, ETL Pipelines, LLM Integration</li>
+          <li><strong>Systems Architecture:</strong> Domain-Driven Design, Event-Driven, Multi-tenant SaaS, System Migration, Idempotency Patterns</li>
+          <li><strong>Observability & Security:</strong> Grafana, New Relic, design docs, ADRs, RFCs</li>
         </ul>
       </div>
     </section>
@@ -115,16 +117,25 @@
         <h3>Senior Software Engineer — Qualiphi (Cairo, Egypt)</h3>
         <p><strong>Nov 2025 – Present</strong></p>
         <ul>
-          <li><strong>Strategic Architecture & Custom Identity Service:</strong> Architected a greenfield multi-tenant SaaS platform on AWS. Conducted a build-vs-buy analysis for identity providers and engineered a custom Authentication & Access service to support complex B2B2C flows (signup/login/tenant-isolation, session management, permission management RBAC), avoiding prohibitive third-party licensing costs that would have compromised unit economics.</li>
-          <li><strong>DevOps Rescue & Observability:</strong> Eliminated severe deployment bottlenecks by architecting the consolidation of 20+ fragmented "branch-per-tenant" frontend repositories into a single, scalable multi-tenant CI/CD pipeline. Drove the integration of New Relic and Sentry, moving the system from blind failures to comprehensive observability.</li>
-          <li><strong>Engineering Leadership & Culture:</strong> Directed two specialized 3-person engineering pods: collaborated with senior engineers on core AWS system design and Domain-Driven Design (DDD) blueprints, while mentoring junior developers on legacy maintenance. Institutionalized a "Document-First" workflow (ADRs, system specs) that drastically reduced cross-team communication overhead and prevented technical debt.</li>
+          <li><strong>Greenfield Technical Leadership:</strong> Acted as primary technical lead for a complete 0-to-1 platform expansion, defining high-level architecture, module boundaries, tech stack selection, and DB schema. Guided a pod of mid-level engineers to deliver the platform autonomously with minimal external oversight.</li>
+          <li><strong>Legacy Rescue & Team Management:</strong> Directed a pod of junior engineers to stabilize mission-critical legacy systems. Mentored the team on major operational upgrades, including remote feature flags and consolidating 20+ fragmented "branch-per-tenant" repositories into a single CI/CD pipeline.</li>
+          <li><strong>Engineering Culture & "Design-First" Documentation:</strong> Institutionalized a "Design-First" engineering culture by authoring the organization's standard technical Design Document template, ADRs, and backend guidelines. Reduced cross-team communication overhead and prevented technical debt across code reviews.</li>
+          <li><strong>Custom IAM & Core Domain Engineering:</strong> Architected a custom Authentication & Access service supporting enterprise SSO, OTP, invites, and declarative RBAC to avoid prohibitive licensing costs while optimizing login latency. Built the core Content Service and Career Service Booking Engine, leveraging RLS for tenant isolation.</li>
+          <li><strong>Infrastructure & CI/CD Optimization (AWS CDK):</strong> Conducted code and architectural reviews for team AWS CDK infrastructure, executing cost-optimization strategies by right-sizing development cloud environments. Enhanced CI/CD pipelines to enforce automated quality gates.</li>
+        </ul>
+
+        <h3>Software Engineer — LDUN (Remote, KSA)</h3>
+        <p><strong>Jul 2025 – Apr 2026 · part-time</strong></p>
+        <ul>
+          <li>Closed critical findings from a third-party pentest to meet a fintech security bar.</li>
+          <li>Shipped feature and workflow work end-to-end (stability and engagement).</li>
         </ul>
 
         <h3>Software Engineer — Microsoft (Cairo, Egypt)</h3>
         <p><strong>May 2024 – July 2025</strong></p>
         <ul>
           <li><strong>Distributed Systems Optimization:</strong> Architected a centralized orchestration layer to replace a legacy "pull-and-discard" model where 500k+ domain payloads were redundantly processed by downstream services, resulting in a 90% reduction in unnecessary data I/O and eliminating massive cloud compute waste.</li>
-          <li><strong>Cross-Org Leadership & SLA Definition:</strong> Investigated and overhauled a failing operational SLA by defining a mathematical priority-tiering system for a 500k+ domain ecosystem. Drove cross-organizational alignment across multiple teams to adopt the new priority streams, reducing P0/P1 domain processing time from 3–5 days to under 6 hours, and boosting the editorial team's throughput by 600% (from 11 to 80+ domains/week).</li>
+          <li><strong>Cross-Org Leadership & SLA Definition:</strong> Investigated and overhauled a failing operational SLA by defining a mathematical priority-tiering system for a 500k+ domain ecosystem. Drove cross-organizational alignment across multiple teams to adopt the new priority streams, reducing P0/P1 domain processing time from 3-5 days to under 6 hours, and boosting the editorial team's throughput by 600% (from 11 to 80+ domains/week).</li>
           <li><strong>Data Engineering for AI:</strong> Built the automated data ingestion and feature-generation pipelines to power a new LLM-based domain classification model. Integrated cross-org data feeds and web scraping tools to continuously feed the model, diverting traffic from manual review.</li>
           <li><strong>Real-Time Observability:</strong> Transformed operational visibility by migrating a rigid, batch-processed daily dashboard to an intuitive, near real-time (hourly) analytics platform. Leveraged Kusto (KQL), Cosmos DB, Scope (Data Lake), and Power BI to accelerate cross-team decision-making and SLA tracking.</li>
         </ul>
@@ -132,12 +143,12 @@
         <h3>Senior Software Engineer / Software Engineer II / Software Engineer I — Sahl (Giza, Egypt)</h3>
         <p><strong>Dec 2021 – May 2024</strong></p>
         <ul>
-          <li><strong>System Scale-up:</strong> Engineered backend and mobile systems to support a 40x transaction volume growth, scaling from 2.5k to 100k daily transactions.</li>
-          <li><strong>Release Management & Stability:</strong> Owned the mobile app release lifecycle. Enforced a strict Feature-Flag deployment strategy, eliminating sprint-killing hot-fixes and enabling risk-free rollouts, instant kill-switches, and backend-driven A/B testing.</li>
+          <li><strong>System Scale-up:</strong> Engineered backend and mobile systems to support a 40x transaction volume growth, scaling from 2.5k to 100k daily transactions, also 16% conversion lift from performance and UX.</li>
+          <li><strong>Release Management & Stability:</strong> Owned the mobile app release lifecycle. Enforced a strict Feature-Flag deployment strategy, eliminating sprint-killing hot-fixes and enabling risk-free rollouts, and data-driven A/B testing.</li>
           <li><strong>Fintech Integrations:</strong> Spearheaded complex integrations with major telecoms (Vodafone, Orange) and various SMBs, navigating unreliable third-party documents and APIs.</li>
           <li><strong>Notification Microservice:</strong> Architected a decoupled C# .NET/AWS SQS microservice to process millions of push and in-app notifications, supporting advanced capabilities like batch sending, scheduling, and in-app deep linking.</li>
-          <li><strong>Observability & Analytics:</strong> Built a custom Flutter event-orchestration layer to unify mobile analytics (Mixpanel/GA), bridging the gap between engineering and business by training PMs and Marketing on data-driven decision-making.</li>
-          <li><strong>Team Leadership:</strong> Acted as a core technical leader alongside the Engineering Director, sharing responsibilities for driving sprint planning, managing OKR alignment, handling cross-functional syncs, and conducting technical interviews/onboarding.</li>
+          <li><strong>Observability & Analytics:</strong> Built a custom Flutter event-orchestration layer to unify mobile analytics (Mixpanel, GA, FBA), bridging the gap between engineering and business by training PMs and Marketing on data-driven decision-making.</li>
+          <li><strong>Team Leadership:</strong> Acted as a core technical leader alongside the L8 Director, sharing responsibilities for driving sprint planning, managing OKR alignment, handling cross-functional syncs, and conducting technical interviews/onboarding.</li>
         </ul>
       </div>
     </section>
@@ -156,7 +167,7 @@
       <h2 class="section-header" onclick="toggleSection(this)">Extracurricular Activities</h2>
       <div class="section-content">
         <ul>
-          <li><strong>ACM ICPC Training (2016–2019):</strong> Ranked 37th in ECPC 2018 and qualified for ACPC Finals (C++).</li>
+          <li><strong>ACM ICPC Training (2016–2019):</strong> Ranked 37th out of 165 in ACM ECPC 2018, advanced to ACPC finals (C++).</li>
           <li><strong>Teacher at Dumah Al-Jandal Charitable Org (2009–2015):</strong> Led weekly 8-hour sessions for ~30 students.</li>
         </ul>
       </div>
@@ -168,7 +179,7 @@
       <div class="section-content">
         <p>
           Available on <a href="https://linkedin.com/in/yahiaabusaif/details/recommendations" target="_blank">LinkedIn</a> —
-          including endorsements from colleagues and managers.
+          including a Microsoft engineering manager and Sahl / Microsoft teammates.
         </p>
       </div>
     </section>
