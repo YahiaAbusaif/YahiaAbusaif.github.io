@@ -32,10 +32,4 @@ In the GitHub repo: **Settings → Pages → Source → GitHub Actions**. Until 
 
 ## Views and clicks
 
-The site uses [GoatCounter](https://www.goatcounter.com) when you give it a site code. It records page views and outbound clicks (LinkedIn, GitHub, mailto, and so on). No cookie banner.
-
-1. Create a free GoatCounter site.
-2. Locally, copy `.env.example` to `.env` and set `PUBLIC_GOATCOUNTER` to the site code (`yahiaabusaif` if the dashboard is `yahiaabusaif.goatcounter.com`).
-3. On GitHub: **Settings → Secrets and variables → Actions → Variables** → add `PUBLIC_GOATCOUNTER` with the same value.
-
-Until that variable exists, the live site sends nothing.
+[GoatCounter](https://yahiaabusaif.goatcounter.com) is on every page. It records views and outbound clicks. Localhost is allowed so `npm run dev` can send a test hit. If the dashboard stays empty, turn off the adblocker for `localhost` and `gc.zgo.at`.
