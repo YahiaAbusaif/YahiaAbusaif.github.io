@@ -1,0 +1,28 @@
+---
+import Base from '../../layouts/Base.astro';
+import { formatDate, getPosts } from '../../lib/posts';
+
+const posts = await getPosts();
+---
+
+<Base
+  title="Writing — Yahia Ali Abusaif"
+  description="Software engineering notes, written down before the code."
+  current="blog"
+>
+  <header class="post-hero">
+    <h1>Writing</h1>
+    <p class="byline">Notes on engineering, process, and the work around the code.</p>
+  </header>
+  <ol class="post-list">
+    {
+      posts.map((post) => (
+        <li>
+          <a href={`/blog/${post.id}/`}>{post.data.title}</a>
+          <time datetime={post.data.date.toISOString()}>{formatDate(post.data.date)}</time>
+          {post.data.description && <p class="excerpt">{post.data.description}</p>}
+        </li>
+      ))
+    }
+  </ol>
+</Base>

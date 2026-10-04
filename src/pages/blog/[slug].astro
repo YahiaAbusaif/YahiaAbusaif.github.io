@@ -1,0 +1,49 @@
+---
+import { render } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import { formatDate, getPosts, type BlogPost } from '../../lib/posts';
+
+export async function getStaticPaths() {
+  const posts = await getPosts();
+  return posts.map((post) => ({
+    params: { slug: post.id },
+    props: { post },
+  }));
+}
+
+interface Props {
+  post: BlogPost;
+}
+
+const { post } = Astro.props;
+const { Content } = await render(post);
+const displayTags = post.data.tags.filter((tag) => tag !== 'English');
+---
+
+<Base
+  title={`${post.data.title} — Yahia Ali Abusaif`}
+  description={post.data.description}
+  current="blog"
+>
+  <a class="back" href="/blog/">← Writing</a>
+  <article>
+    <header class="post-hero">
+      <h1>{post.data.title}</h1>
+      <p class="byline">
+        <time datetime={post.data.date.toISOString()}>{formatDate(post.data.date)}</time>
+      </p>
+      {
+        displayTags.length > 0 && (
+          <p class="tags">
+            {displayTags.map((tag) => (
+              <span>{tag}</span>
+            ))}
+          </p>
+        )
+      }
+    </header>
+    <div class="prose">
+      <Content />
+    </div>
+  </article>
+</Base>

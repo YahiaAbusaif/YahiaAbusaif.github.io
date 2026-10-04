@@ -1,0 +1,28 @@
+<button type="button" class="theme-toggle" data-theme-toggle aria-label="Toggle color theme">
+  Dark
+</button>
+
+<script>
+  const root = document.documentElement;
+
+  function isDark() {
+    return root.classList.contains('dark');
+  }
+
+  function syncLabel(button: HTMLButtonElement) {
+    button.textContent = isDark() ? 'Light' : 'Dark';
+  }
+
+  function apply(next: 'dark' | 'light') {
+    root.classList.toggle('dark', next === 'dark');
+    localStorage.setItem('theme', next);
+    document.querySelectorAll<HTMLButtonElement>('[data-theme-toggle]').forEach(syncLabel);
+  }
+
+  document.querySelectorAll<HTMLButtonElement>('[data-theme-toggle]').forEach((button) => {
+    syncLabel(button);
+    button.addEventListener('click', () => {
+      apply(isDark() ? 'light' : 'dark');
+    });
+  });
+</script>
