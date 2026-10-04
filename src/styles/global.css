@@ -8,7 +8,7 @@
   --accent-soft: #d7eaf1;
   --sans: "Source Sans 3", "Segoe UI", sans-serif;
   --serif: "Source Serif 4", "Iowan Old Style", "Palatino Linotype", serif;
-  --page: min(60rem, calc(100% - 3rem));
+  --page: min(48rem, calc(100% - 4rem));
 }
 
 html.dark {
