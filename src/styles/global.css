@@ -8,7 +8,7 @@
   --accent-soft: #d7eaf1;
   --sans: "Source Sans 3", "Segoe UI", sans-serif;
   --serif: "Source Serif 4", "Iowan Old Style", "Palatino Linotype", serif;
-  --page: calc(100vw - 4rem);
+  --page-pad: clamp(1.5rem, 5vw, 4rem);
 }
 
 html.dark {
@@ -48,6 +48,7 @@ body {
   font-size: 1.0625rem;
   line-height: 1.65;
   min-height: 100vh;
+  padding-inline: var(--page-pad);
 }
 
 img {
@@ -87,9 +88,9 @@ a:hover {
 .site-header,
 .site-footer,
 .page {
-  width: var(--page);
+  width: 100%;
   max-width: none;
-  margin-inline: auto;
+  margin-inline: 0;
 }
 
 .site-header {
