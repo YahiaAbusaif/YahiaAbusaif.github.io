@@ -3,7 +3,7 @@ title: From Monolithic Chaos to Microservice Over-Engineering
 date: '2025-11-10'
 description: There’s a lot of talk about software architecture, especially around
   which is better, Monolithic vs Microservice First, let's have it as a simple definition
-  while it will not be accurate for now Monolithic system mainly…
+  (while it will not be accurate for now) Monolithic system…
 tags:
 - Design-Principles
 - English

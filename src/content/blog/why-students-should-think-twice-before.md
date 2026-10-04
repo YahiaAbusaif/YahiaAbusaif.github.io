@@ -3,7 +3,7 @@ title: Why Students Should Think Twice Before Overusing AI Tools in College
 date: '2025-06-22'
 description: 'In recent years, I’ve noticed a growing trend: many students and fresh
   graduates are heavily relying on AI tools during their college years. While I’m
-  a strong believer in the power of large language models LLMs for…'
+  a strong believer in the power of large language models (LLMs) for…'
 tags:
 - AI
 - General

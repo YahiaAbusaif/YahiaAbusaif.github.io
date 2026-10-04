@@ -1,7 +1,7 @@
 ---
 title: Technical Design Document
 date: '2025-09-01'
-description: In software development, we often move fast especially in agile environments.
+description: In software development, we often move fast (especially in agile environments).
   But moving fast doesn’t mean skipping structure. One of the most important tools
   to ensure alignment, clarity, and quality is the Technical…
 tags:

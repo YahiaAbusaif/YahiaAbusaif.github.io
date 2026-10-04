@@ -2,8 +2,8 @@
 title: Multi-tenant pattern in SaaS platform
 date: '2026-07-20'
 description: In the last year, I had the chance to work on an interesting problem
-  for a SaaS platform that serves as a B2B2C platform business-to-business-to-customers.
-  mainly, where you sell the platform to large entities that have…
+  for a SaaS platform that serves as a B2B2C platform (business-to-business-to-customers).
+  mainly, where you sell the platform to large entities that…
 tags:
 - Design-Principles
 - English

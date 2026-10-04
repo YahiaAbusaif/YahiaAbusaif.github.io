@@ -1,8 +1,9 @@
 ---
 title: Account Security using Password
 date: '2022-09-02'
-description: '!Password Security Guidelines: Everything You Need to Know | SpyCloudhttps://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLzQ2AsKKCCpBU2NYgmPK87k3mug3Z9ww&usqp=CAU
-  In this article, I will talk about the first and the…'
+description: In this article, I will talk about the first and the oldest security
+  method, the password as this article will be part of a series of articles about
+  account security methods and why we hear the word "Password-less" more…
 tags:
 - English
 - Programming

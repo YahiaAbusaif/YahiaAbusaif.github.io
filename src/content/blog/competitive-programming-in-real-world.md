@@ -1,9 +1,9 @@
 ---
 title: Competitive Programming
 date: '2022-08-25'
-description: '!https://qph.cf2.quoracdn.net/main-qimg-0475c0d183bac2e1333f066f5371af09-pjlq
-  One of the old topics I wanted to talk about is Algorithms, first, let''s define
-  some words to be on the same page - Algorithms and Data…'
+description: 'One of the old topics I wanted to talk about is Algorithms, first, let''s
+  define some words to be on the same page - Algorithms and Data structure: both are
+  knowledge based on Mathematics and computer science, and both…'
 tags:
 - English
 - Problem-Solving

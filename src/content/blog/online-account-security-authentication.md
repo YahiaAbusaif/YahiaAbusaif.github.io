@@ -1,8 +1,9 @@
 ---
 title: Authentication Tokens
 date: '2022-09-08'
-description: '!Token-based Authentication ✋ - Definition, Types, Pros and conshttps://assets.website-files.com/5ff66329429d880392f6cba2/62738d33a705db88f644a5d8Token-based%20Authentication%20Preview.jpg
-  In the last Article, I…'
+description: In the last Article, I discussed the password method to identify the
+  user, before diving deep into the other methods I want to discuss the authentication
+  token. After the user login and the system recognize him, it will…
 tags:
 - English
 - Programming

@@ -3,7 +3,7 @@ title: The Success Secret
 date: '2022-09-18'
 description: This small article is about a hot topic that has many discussions in
   the social media "The way to success". For the last few months, I skip several books
-  that talk about different topics most of them have many…
+  that talk about different topics (most of them have many…
 tags:
 - English
 - Self-Improvement

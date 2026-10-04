@@ -1,8 +1,9 @@
 ---
 title: Biometric Authentication
 date: '2022-10-08'
-description: '!What is biometric authentication and how does it store my data?https://stonelock.com/wp-content/uploads/2020/12/StoneLock-Blog-What-is-biometric-authentication-and-which-method-is-most-secure-1.png
-  Let''s talk about one…'
+description: Let's talk about one of the recent sign-in methods that became popular
+  recently, the Biometric login which includes fingerprint, face id, voice recognition,
+  and other methods, but mainly let's talk about the most secure…
 tags:
 - English
 - Programming

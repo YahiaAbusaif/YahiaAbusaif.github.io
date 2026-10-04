@@ -2,8 +2,8 @@
 title: Rethinking the AI-Driven Development
 date: '2026-08-15'
 description: When software executives discuss Artificial Intelligence, specifically
-  frontier Large Language Models LLMs and coding assistants, the conversation almost
-  always focuses on speed and tool adoption. Companies rush to buy…
+  frontier Large Language Models (LLMs) and coding assistants, the conversation almost
+  always focuses on speed and tool adoption. Companies rush to…
 tags:
 - AI
 - English
