@@ -8,8 +8,8 @@
   --accent-soft: #d7eaf1;
   --sans: "Source Sans 3", "Segoe UI", sans-serif;
   --serif: "Source Serif 4", "Iowan Old Style", "Palatino Linotype", serif;
-  --measure: 40rem;
-  --page: 46rem;
+  --page: min(90rem, 80vw);
+  --measure: min(72ch, 100%);
 }
 
 html.dark {
@@ -88,7 +88,7 @@ a:hover {
 .site-header,
 .site-footer,
 .page {
-  width: min(var(--page), calc(100% - 2rem));
+  width: min(var(--page), calc(100% - 2.5rem));
   margin-inline: auto;
 }
 
@@ -191,7 +191,7 @@ a:hover {
 
 .hero .lede {
   margin: 0 0 1rem;
-  max-width: 42rem;
+  max-width: min(70ch, 100%);
 }
 
 .meta-links {
