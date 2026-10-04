@@ -2,6 +2,9 @@
   "name": "yahiaabusaif-github-io",
   "type": "module",
   "private": true,
+  "engines": {
+    "node": ">=20.3.0"
+  },
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
@@ -9,6 +12,6 @@
   },
   "dependencies": {
     "@astrojs/rss": "^4.0.19",
-    "astro": "^7.3.5"
+    "astro": "^5.18.2"
   }
 }
