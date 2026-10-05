@@ -6,6 +6,9 @@
   --line: #e7e0d6;
   --accent: #1d6a8a;
   --accent-soft: #d7eaf1;
+  --glow-a: color-mix(in srgb, var(--accent) 28%, transparent);
+  --glow-b: color-mix(in srgb, #c4a574 42%, transparent);
+  --dot: color-mix(in srgb, var(--ink) 16%, transparent);
   --sans: "Source Sans 3", "Segoe UI", sans-serif;
   --serif: "Source Serif 4", "Iowan Old Style", "Palatino Linotype", serif;
   --page: min(40rem, calc(100% - 4rem));
@@ -19,6 +22,9 @@ html.dark {
   --line: #2e2a26;
   --accent: #7eb8d0;
   --accent-soft: #24343a;
+  --glow-a: color-mix(in srgb, var(--accent) 18%, transparent);
+  --glow-b: color-mix(in srgb, #8a6a45 28%, transparent);
+  --dot: color-mix(in srgb, var(--ink) 12%, transparent);
 }
 
 *,
@@ -48,6 +54,46 @@ body {
   font-size: 1.0625rem;
   line-height: 1.65;
   min-height: 100vh;
+  position: relative;
+}
+
+body::before,
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+body::before {
+  background:
+    radial-gradient(46rem 28rem at -6% -8%, var(--glow-a), transparent 68%),
+    radial-gradient(38rem 24rem at 106% -4%, var(--glow-b), transparent 66%),
+    radial-gradient(42rem 20rem at 40% 112%, var(--glow-b), transparent 70%);
+}
+
+body::after {
+  background-image: radial-gradient(var(--dot) 0.85px, transparent 0.85px);
+  background-size: 18px 18px;
+  -webkit-mask-image: linear-gradient(
+    90deg,
+    #000 0,
+    #000 calc(50% - 24rem),
+    transparent calc(50% - 19rem),
+    transparent calc(50% + 19rem),
+    #000 calc(50% + 24rem),
+    #000 100%
+  );
+  mask-image: linear-gradient(
+    90deg,
+    #000 0,
+    #000 calc(50% - 24rem),
+    transparent calc(50% - 19rem),
+    transparent calc(50% + 19rem),
+    #000 calc(50% + 24rem),
+    #000 100%
+  );
 }
 
 img {
@@ -87,6 +133,8 @@ a:hover {
 .site-header,
 .site-footer,
 .page {
+  position: relative;
+  z-index: 1;
   width: var(--page);
   margin-inline: auto;
 }
