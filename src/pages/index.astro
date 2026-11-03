@@ -21,10 +21,10 @@ const latest = (await getPosts()).slice(0, 3);
         cross-team workstream on a 500k+ domain pipeline: 90% less unnecessary data I/O,
         P0/P1 from 3-5 days to under 6 hours, and 600% editorial throughput. At Sahl,
         end-to-end owner of the B2C mobile and backend path through 40x transaction
-        growth (2.5k to 100k/day). Now at Qualiphi, technical lead across two pods
-        (greenfield SaaS and legacy), with a Design-First practice of ADRs and design
-        docs. Known for workstream ownership, mentoring, and making the design explicit
-        before the code.
+        growth (2.5k to 100k/day). Now at Qualiphi, built the platform from nothing in
+        C#, .NET Core, Python, Django, and React on AWS. The older product and the new
+        one support around 43,000 users across multiple tenants. Known for workstream
+        ownership, mentoring, and making the design explicit before the code.
       </p>
       <p class="meta-links">
         <span>New Cairo, Egypt · open to relocation</span>
@@ -81,35 +81,26 @@ const latest = (await getPosts()).slice(0, 3);
       <p class="when">Nov 2025 – Present</p>
       <ul>
         <li>
-          <strong>Greenfield technical leadership:</strong> Acted as primary technical lead for a
-          complete 0-to-1 platform expansion, defining high-level architecture, module
-          boundaries, tech stack selection, and DB schema. Guided a pod of mid-level
-          engineers to deliver the platform autonomously with minimal external oversight.
+          <strong>Platform from nothing:</strong> Built the platform from nothing with the
+          business and design teams, in C#, .NET Core, Python, Django, and React. Chose the
+          architecture after comparing frameworks and cloud providers, stood up AWS with CDK,
+          and defined how the team ships, from the design document through a ticket to production.
         </li>
         <li>
-          <strong>Legacy rescue & team management:</strong> Directed a pod of junior engineers
-          to stabilize mission-critical legacy systems. Mentored the team on major
-          operational upgrades, including remote feature flags and consolidating 20+
-          fragmented "branch-per-tenant" repositories into a single CI/CD pipeline.
+          <strong>Identity:</strong> Owned the platform's identity end to end, on the frontend,
+          backend, and infrastructure: authentication, sessions, invitations, Google and
+          Microsoft sign-in, and multi-tenant RBAC.
         </li>
         <li>
-          <strong>Engineering culture & "Design-First" documentation:</strong> Institutionalized
-          a "Design-First" engineering culture by authoring the organization's standard
-          technical Design Document template, ADRs, and backend guidelines. Reduced
-          cross-team communication overhead and prevented technical debt across code reviews.
+          <strong>Product:</strong> Designed and shipped content management, one-to-one career
+          sessions, and the student profile, including claims, vector embeddings, AI generation,
+          and anti-web-scraping.
         </li>
         <li>
-          <strong>Custom IAM & core domain engineering:</strong> Architected a custom
-          Authentication & Access service supporting enterprise SSO, OTP, invites, and
-          declarative RBAC to avoid prohibitive licensing costs while optimizing login
-          latency. Built the core Content Service and Career Service Booking Engine,
-          leveraging RLS for tenant isolation.
-        </li>
-        <li>
-          <strong>Infrastructure & CI/CD optimization (AWS CDK):</strong> Conducted code and
-          architectural reviews for team AWS CDK infrastructure, executing cost-optimization
-          strategies by right-sizing development cloud environments. Enhanced CI/CD pipelines
-          to enforce automated quality gates.
+          <strong>Legacy product:</strong> Mentored the junior engineers on a legacy product of
+          more than 10 per-tenant branches and brought it to a state they could manage. The
+          older product and the new platform together support around 43,000 users across
+          multiple tenants.
         </li>
       </ul>
     </article>
