@@ -111,9 +111,8 @@ const latest = (await getPosts()).slice(0, 3);
       <ul>
         <li>Fixed findings from a pentest and raised the security bar, with new layers for merchant OTP, login OTP, and the checks around them.</li>
         <li>
-          Shipped order, IBAN, and notification work: a Lean outage no longer rejects a valid
-          IBAN, order files are checked before the merchant is saved, and a failed notification
-          retries without sending twice. Reviewed other engineers' code.
+          Enhanced order file management and introduced retry logic in the notification
+          engine. Reviewed other engineers' code.
         </li>
       </ul>
     </article>
