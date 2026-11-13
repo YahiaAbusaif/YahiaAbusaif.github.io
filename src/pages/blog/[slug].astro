@@ -25,25 +25,21 @@ const displayTags = post.data.tags.filter((tag) => tag !== 'English');
   description={post.data.description}
   current="blog"
 >
-  <a class="back" href="/blog/">← Writing</a>
-  <article>
-    <header class="post-hero">
-      <h1>{post.data.title}</h1>
-      <p class="byline">
+  <article class="essay">
+    <aside class="rail">
+      <a class="back" href="/blog/">Essays</a>
+      <p class="folio">
         <time datetime={post.data.date.toISOString()}>{formatDate(post.data.date)}</time>
       </p>
-      {
-        displayTags.length > 0 && (
-          <p class="tags">
-            {displayTags.map((tag) => (
-              <span>{tag}</span>
-            ))}
-          </p>
-        )
-      }
-    </header>
-    <div class="prose">
-      <Content />
+      {displayTags.length > 0 && <p class="tags">{displayTags.join(', ')}</p>}
+    </aside>
+    <div>
+      <header class="post-hero">
+        <h1>{post.data.title}</h1>
+      </header>
+      <div class="prose">
+        <Content />
+      </div>
     </div>
   </article>
 </Base>
