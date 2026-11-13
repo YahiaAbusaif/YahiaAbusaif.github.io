@@ -1,0 +1,24 @@
+---
+import { formatDate, type BlogPost } from '../lib/posts';
+
+interface Props {
+  posts: BlogPost[];
+  showExcerpt?: boolean;
+}
+
+const { posts, showExcerpt = false } = Astro.props;
+---
+
+<ol class="contents">
+  {
+    posts.map((post) => (
+      <li>
+        <a href={`/blog/${post.id}/`}>
+          <span class="contents-title"><span>{post.data.title}</span></span>
+          <time datetime={post.data.date.toISOString()}>{formatDate(post.data.date)}</time>
+          {showExcerpt && post.data.description && <span class="excerpt">{post.data.description}</span>}
+        </a>
+      </li>
+    ))
+  }
+</ol>
