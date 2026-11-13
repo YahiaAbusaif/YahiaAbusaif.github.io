@@ -52,6 +52,54 @@ body {
   font-size: 1.0625rem;
   line-height: 1.65;
   min-height: 100vh;
+  position: relative;
+}
+
+body > * {
+  position: relative;
+  z-index: 1;
+}
+
+@media (min-width: 900px) {
+  body {
+    --gutter: max(0px, calc((100vw - var(--page)) / 2));
+    --tile: clamp(2.75rem, 3.2vw, 3.75rem);
+  }
+
+  body::before,
+  body::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: var(--gutter);
+    z-index: 0;
+    pointer-events: none;
+    background-color: var(--accent);
+    opacity: 0.34;
+    -webkit-mask-image: linear-gradient(to right, #000 0%, #000 32%, transparent 100%),
+      url("/ornament-tile.svg");
+    mask-image: linear-gradient(to right, #000 0%, #000 32%, transparent 100%),
+      url("/ornament-tile.svg");
+    -webkit-mask-size: 100% 100%, var(--tile) var(--tile);
+    mask-size: 100% 100%, var(--tile) var(--tile);
+    -webkit-mask-repeat: no-repeat, repeat;
+    mask-repeat: no-repeat, repeat;
+    -webkit-mask-composite: destination-in;
+    mask-composite: intersect;
+  }
+
+  body::before {
+    left: 0;
+  }
+
+  body::after {
+    right: 0;
+    -webkit-mask-image: linear-gradient(to left, #000 0%, #000 32%, transparent 100%),
+      url("/ornament-tile.svg");
+    mask-image: linear-gradient(to left, #000 0%, #000 32%, transparent 100%),
+      url("/ornament-tile.svg");
+  }
 }
 
 img {
@@ -889,27 +937,44 @@ html.dark .theme-toggle .icon-moon {
   }
 
   .job {
-    grid-template-columns: 1fr;
-    row-gap: 0.55rem;
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.45rem;
   }
 
-  .job-rail,
   .job-main {
-    grid-column: 1;
-    grid-row: auto;
+    display: contents;
+  }
+
+  .job h3 {
+    order: 1;
+    margin-bottom: 0.35rem;
   }
 
   .job-rail {
+    order: 2;
     flex-direction: row;
     align-items: center;
     justify-content: flex-start;
     gap: 0.45rem;
     text-align: left;
     padding: 0;
+    margin-bottom: 0.25rem;
   }
 
-  .job-end,
+  .job ul,
+  .job-blurb,
+  .job .visually-hidden {
+    order: 3;
+  }
+
   .job-start {
+    order: 1;
+    padding-left: 0;
+  }
+
+  .job-end {
+    order: 3;
     padding-left: 0;
   }
 
@@ -919,10 +984,12 @@ html.dark .theme-toggle .icon-moon {
   }
 
   .job-note {
+    order: 4;
     margin: 0;
   }
 
   .job-rule {
+    order: 2;
     flex: 0 0 2.4rem;
     width: 2.4rem;
     height: 1px;
